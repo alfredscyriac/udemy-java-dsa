@@ -6,6 +6,6 @@ public class LinkedList {
         ListNode newNode = new ListNode(value);
         head=newNode;
         tail=newNode;
-        length+=1; 
+        length=1; 
     }    
 }
