@@ -142,4 +142,23 @@ public class LinkedList {
         length+=1;
         return true;
     }
+
+    // Method that removes a node a specific index
+    public ListNode remove(int index){
+        if(index<0 || index>=length){
+            return null;
+        }
+        if(index==0){
+            return removeFirst();
+        }
+        if(index==length-1){
+            return removeLast();
+        }
+        ListNode prev = get(index-1);
+        ListNode temp = get(index);
+        prev.next=temp.next;
+        temp.next=null;
+        length-=1;
+        return temp; 
+    }
 }
