@@ -121,4 +121,25 @@ public class LinkedList {
             return false;
         }
     }
+
+    // Method that allows a new node to be inserted at any index
+    public boolean insert(int index, int value){
+        if(index<0 || index>length){
+            return false;
+        }
+        if(index==0){
+            Prepend(value);
+            return true;
+        }
+        if(index==length){
+            Append(value);
+            return true;
+        }
+        ListNode newNode = new ListNode(value);
+        ListNode prev = get(index-1);
+        newNode.next=prev.next;
+        prev.next=newNode;
+        length+=1;
+        return true;
+    }
 }
