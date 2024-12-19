@@ -20,4 +20,16 @@ public class LinkedList {
             current=current.next; 
         }
     }   
+
+    public void getHead(){
+        System.out.println("Head: "+head);
+    }
+
+    public void getTail(){
+        System.out.println("Tail: "+tail);
+    }
+
+    public void getLength(){
+        System.out.println("Length: "+length);
+    }
 }
