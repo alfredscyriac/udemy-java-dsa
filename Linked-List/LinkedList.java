@@ -161,4 +161,20 @@ public class LinkedList {
         length-=1;
         return temp; 
     }
+
+    // Method that reverses the order of the linked list
+    public void reverse(){
+        ListNode temp = head;
+        head=tail;
+        tail=temp;
+        ListNode after = temp.next;
+        ListNode before = null;
+        for(int i=0;i<length;i++){
+            after=temp.next;
+            temp.next=before;
+            before=temp; 
+            temp=after;
+        }
+
+    }
 }
