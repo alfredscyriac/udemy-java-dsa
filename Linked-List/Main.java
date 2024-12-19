@@ -5,5 +5,9 @@ public class Main {
         myLinkedList.getTail();
         myLinkedList.getLength();
         myLinkedList.PrintList();
+        myLinkedList.Append(5);
+        myLinkedList.PrintList();
+        myLinkedList.removeLast();
+        myLinkedList.PrintList();
     }
 }

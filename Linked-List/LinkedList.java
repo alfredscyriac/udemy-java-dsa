@@ -22,11 +22,11 @@ public class LinkedList {
     }   
 
     public void getHead(){
-        System.out.println("Head: "+head);
+        System.out.println("Head: "+head.value);
     }
 
     public void getTail(){
-        System.out.println("Tail: "+tail);
+        System.out.println("Tail: "+tail.value);
     }
 
     public void getLength(){
@@ -66,5 +66,19 @@ public class LinkedList {
             tail=null;
         }
         return temp;
+    }
+
+    // Method that adds node to the front of the linked list 
+    public void Prepend(int value){
+        ListNode newNode = new ListNode(value);
+        if(length==0){
+            head=newNode;
+            tail=newNode;
+        }
+        else{
+            newNode.next=head;
+            head=newNode;
+        }
+        length+=1;
     }
 }
