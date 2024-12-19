@@ -97,4 +97,16 @@ public class LinkedList {
         }
         return temp;
     }
+
+    // Method that returns the node at a specific index passed in as parameter 
+    public ListNode get(int index){
+        if(index<0 || index>= length){
+            return null;
+        }
+        ListNode temp = head; 
+        for(int i=0;i<index;i++){
+            temp=temp.next;
+        }
+        return temp;
+    }
 }
