@@ -81,4 +81,20 @@ public class LinkedList {
         }
         length+=1;
     }
+
+    // Method that removes the first node and returns it
+    public ListNode removeFirst(){
+        if(length==0){
+            return null;
+        }
+        ListNode temp = head; 
+        head=head.next; 
+        temp.next=null;
+        length-=1; 
+        // Checks for length == 1 originally but became 0
+        if(length==0){
+            tail=null;
+        }
+        return temp;
+    }
 }
