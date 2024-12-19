@@ -109,4 +109,16 @@ public class LinkedList {
         }
         return temp;
     }
+
+    // Method that sets a specific node at a specific index to a new value
+    public boolean set(int index, int value){
+        ListNode temp = get(index);
+        if(temp!=null){
+            temp.value=value;
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
 }
