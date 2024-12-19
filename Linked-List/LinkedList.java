@@ -32,4 +32,18 @@ public class LinkedList {
     public void getLength(){
         System.out.println("Length: "+length);
     }
+
+    // Method adds a new node to the end of the linked list
+    public void Append(int value){
+        ListNode newNode = new ListNode(value); 
+        if(length==0){
+            head=newNode;
+            tail=newNode;
+        }
+        else{
+            tail.next=newNode;
+            tail=newNode; 
+        }
+        length+=1; 
+    }
 }
