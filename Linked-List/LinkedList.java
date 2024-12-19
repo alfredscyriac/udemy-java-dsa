@@ -46,6 +46,8 @@ public class LinkedList {
         }
         length+=1; 
     }
+
+    // Method removes the last node from linked lists and returns it
     public ListNode removeLast(){
         if(length==0){
             return null;
