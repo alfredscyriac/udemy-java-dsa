@@ -1,3 +1,5 @@
+import org.w3c.dom.Node;
+
 public class LinkedList {
     // Private instance variables 
     private ListNode head; 
@@ -175,6 +177,17 @@ public class LinkedList {
             before=temp; 
             temp=after;
         }
-
     }
+
+    // Method that returns the node in the middle without using length
+    // Hare and Tortise Algorithm
+    public ListNode findMiddleNode(){
+	    ListNode slow = head; 
+	    ListNode fast = head; 
+	    while(fast!=null && fast.next!=null){
+	        slow=slow.next;
+	        fast=fast.next.next;
+	    }
+	    return slow; 
+	}
 }
