@@ -180,7 +180,7 @@ public class LinkedList {
     }
 
     // Method that returns the node in the middle without using length
-    // Hare and Tortise Algorithm
+    // Tortoise and the Hare Algorithm
     public ListNode findMiddleNode(){
 	    ListNode slow = head; 
 	    ListNode fast = head; 
@@ -189,5 +189,20 @@ public class LinkedList {
 	        fast=fast.next.next;
 	    }
 	    return slow; 
+	}
+
+    // Method that checks if linked list has loop
+    // Tortoise and the Hare Algorithm
+    public boolean hasLoop(){
+	    ListNode slow = head; 
+	    ListNode fast = head; 
+	    while(fast!=null && fast.next!=null){
+	        slow=slow.next;
+	        fast=fast.next.next;
+	        if(slow==fast){
+	            return true; 
+	        }
+	    }
+	    return false; 
 	}
 }
