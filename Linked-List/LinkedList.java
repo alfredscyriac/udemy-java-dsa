@@ -1,5 +1,3 @@
-import org.w3c.dom.Node;
-
 public class LinkedList {
     // Private instance variables 
     private ListNode head; 
